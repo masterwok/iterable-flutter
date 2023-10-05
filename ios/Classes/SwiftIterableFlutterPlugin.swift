@@ -3,7 +3,7 @@ import UIKit
 import IterableSDK
 import UserNotifications
 
-public class SwiftIterableFlutterPlugin: NSObject, FlutterPlugin, UNUserNotificationCenterDelegate, IterableCustomActionDelegate, IterableURLDelegate {
+public class SwiftIterableFlutterPlugin: NSObject, FlutterPlugin, UNUserNotificationCenterDelegate, IterableCustomActionDelegate, IterableURLDelegate, IterableInAppDelegate {
    
     static var channel: FlutterMethodChannel? = nil
     
@@ -79,6 +79,7 @@ public class SwiftIterableFlutterPlugin: NSObject, FlutterPlugin, UNUserNotifica
         config.autoPushRegistration = true
         config.customActionDelegate = self
         config.urlDelegate = self
+        config.inAppDelegate = self
         
         IterableAPI.initialize(apiKey: apiKey, config: config)
     }
@@ -152,6 +153,10 @@ public class SwiftIterableFlutterPlugin: NSObject, FlutterPlugin, UNUserNotifica
         
         SwiftIterableFlutterPlugin.channel?.invokeMethod("openedNotificationHandler", arguments: payload)
         
+    }
+    
+    public func onNew(message: IterableInAppMessage) -> InAppShowResponse {
+        return .skip
     }
     
 }

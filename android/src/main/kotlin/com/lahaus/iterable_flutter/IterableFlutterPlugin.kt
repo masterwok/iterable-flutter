@@ -103,6 +103,7 @@ class IterableFlutterPlugin : FlutterPlugin, MethodCallHandler {
     val configBuilder = IterableConfig.Builder()
       .setPushIntegrationName(pushIntegrationName)
       .setAutoPushRegistration(false)
+      .setInAppHandler { IterableInAppHandler.InAppResponse.SKIP }
       .setCustomActionHandler { _, _ ->
         notifyPushNotificationOpened()
         false

@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'iterable_flutter'
-  s.version          = '0.5.7'
+  s.version          = '0.6.0'
   s.summary          = 'Flutter implementation for iterable.com Cross Channel Marketing Platform'
   s.description      = <<-DESC
   Flutter implementation for iterable.com Cross Channel Marketing Platform
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'Iterable-iOS-SDK', '6.4.7'
+  s.dependency 'Iterable-iOS-SDK', '6.4.15'
   s.platform = :ios, '11.0'
 
   # Flutter.framework does not contain a i386 slice.
