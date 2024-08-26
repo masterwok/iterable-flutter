@@ -30,7 +30,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.8.1'
+          flutter-version: '3.24.1'
           channel: 'stable'
           cache: true
           cache-key: flutter # optional, change this to force refresh cache
@@ -49,7 +49,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.8.1'
+          flutter-version: '3.24.1'
           channel: 'stable'
           cache: true
           cache-key: flutter # optional, change this to force refresh cache
